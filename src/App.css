@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+@media only screen and (min-width: 768px) {
+    p {padding: 30px;}
+  }
+
+
 .main{
     
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(100, 14, 150);
-    color: azure;
+    background-color: rgb(233, 227, 240);
+    color: rgb(32, 133, 133);
     flex-direction: column;
   }
 
@@ -17,7 +22,7 @@
 }
 
 .createUser-form label {
-    color: whitesmoke !important;
+    color: rgb(32, 133, 133) !important;
     font-family: 'Acme', sans-serif;
-    font-size: 20px !important;
+    font-size: 25px !important;
   }
