@@ -1,30 +1,54 @@
 import React, { useState } from 'react'
-import { Button, Form } from 'semantic-ui-react'
+// import { Button, Form } from 'semantic-ui-react'
 
 const CreateUser = () => {
-  const [name, setName] = useState('');
-    const [gender, setGender] = useState('');
+  
+const [name, setName] = useState("");
+const [gender, setGender] = useState("")
+const [isLoading, setIsLoading] = useState(false);
 
-    const postData = () => {
-      console.log(name);
-      console.log(gender);
-      
-}
+const handleSubmit = (e) => {
+  e.preventDefault();
+const user = {name, gender};
+
+//     const postData = () => {
+//       console.log(user);
+fetch('http://localhost:9393/users', {
+            method: `POST`,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(user)
+        }).then(() => {
+            console.log('new user posted');
+            setIsLoading(false);
+            
+           
+        })
+
+    }
     return (
 
-  <Form className="createUser-form">
-    <Form.Field>
-      <label>Name</label>
-      <input placeholder='Type Your Name Here' onChange={(e) => setName(e.target.value)} />
-    </Form.Field>
-    <Form.Field>
-      <label>Gender Identity</label>
-      <input placeholder='Type Gender Identity Here' onChange={(e) => setGender(e.target.value)} />
-    </Form.Field>
+  <form onSubmit={ handleSubmit } className="createUser-form">
+  
+      <label class='form-label'>Name</label>
+      <input type="text"
+      placeholder='Type Your Name Here'
+      required 
+      value={ name }
+      onChange={(e) => setName(e.target.value)} />
     
-    <Button onClick={postData} type='submit'>Submit</Button>
-  </Form>
+    
+      <label class="form-label">Gender Identity</label>
+      <input type="text"
+      placeholder='Type Gender Identity Here' 
+      value={ gender }
+      onChange={(e) => setGender(e.target.value)} />
+  
+    
+  { !isLoading && <button>Submit</button>}
+  { isLoading && <button disabled>Creating Account</button>}
+  </form>
 );
     }
+  
 
 export default CreateUser;
