@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { Button, Form } from 'semantic-ui-react'
+
 
 const CreateUser = () => {
   
@@ -27,7 +27,7 @@ fetch('http://localhost:9393/users', {
     }
     return (
 
-  <form onSubmit={ handleSubmit } className="createUser-form">
+  <form onSubmit={ handleSubmit } className="cmdUser-form">
   
       <label class='form-label'>Name</label>
       <input type="text"

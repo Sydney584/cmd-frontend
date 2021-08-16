@@ -51,7 +51,7 @@ base styles
   color: #f1356d;
 }
 
-.createUser-form label {
+.cmdUser-form label {
     color: rgb(32, 133, 133) !important;
     font-family: 'Acme', sans-serif;
     font-size: 25px !important;

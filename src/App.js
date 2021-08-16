@@ -2,8 +2,8 @@
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import UserDetails from './components/UserDetails';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import UserContainer from './components/UserContainer';
 
 function App() {
   
@@ -15,8 +15,8 @@ function App() {
      <Route exact path="/">
        <Home />
        </Route>
-       <Route path="/UserDetails"></Route>
-       <UserDetails />
+       <Route path="/UserContainer"></Route>
+       <UserContainer />
       
      </div>
 

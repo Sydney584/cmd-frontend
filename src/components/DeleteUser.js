@@ -22,7 +22,7 @@ const CmdUser = () => {
           return res.json();
         })
         .then(data => {
-          setQuotes(data);
+          setUsers(data);
           setError(null);
         })
         .catch(err => {
@@ -53,7 +53,7 @@ const CmdUser = () => {
       { error && <div>{ error }</div> }
        {users && (
            <article>
-               <h2>{ quotes.title}</h2>
+               <h2>{ users.name }</h2>
                <p>Written by: { quotes.author }</p>
                <div class="text md-start">{ quotes.body }</div>
                
@@ -72,4 +72,4 @@ const CmdUser = () => {
 }
 
  
-export default QuotesContainer;
+export default CmdUser;
