@@ -2,22 +2,26 @@
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import UserContainer from './components/UserContainer';
-// import { BrowserRouter as Router, Route } from 'react-router-dom'
+import UserDetails from './components/UserDetails';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 function App() {
   
   return (
+    <Router>
     <div className="main">
       <Navbar />
-     <div className="content">
+     <div className="main-container">
+     <Route exact path="/">
        <Home />
-       <UserContainer />
+       </Route>
+       <Route path="/UserDetails"></Route>
+       <UserDetails />
       
      </div>
 
     </div>
-    
+    </Router>
   );
 }
 

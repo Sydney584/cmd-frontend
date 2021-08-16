@@ -3,7 +3,7 @@
 @media only screen and (min-width: 768px) {
     p {padding: 30px;}
   }
-/* base styles */
+base styles
 * {
   margin: 0;
   font-family: 'Acme';
@@ -11,7 +11,7 @@
 }
 
 
-/* .main{
+ /* .main{
     
     display: flex;
     justify-content: center;
@@ -24,6 +24,7 @@
 
 .main-header{
     font-family: 'Acme', sans-serif;
+    color: rgb(32, 133, 133);
     
 }
 
@@ -54,4 +55,4 @@
     color: rgb(32, 133, 133) !important;
     font-family: 'Acme', sans-serif;
     font-size: 25px !important;
-  }
+  } 
