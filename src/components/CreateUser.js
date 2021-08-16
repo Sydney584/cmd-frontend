@@ -13,6 +13,8 @@ const user = {name, gender};
 
 //     const postData = () => {
 //       console.log(user);
+
+// CREATE
 fetch('http://localhost:9393/users', {
             method: `POST`,
             headers: { "Content-Type": "application/json" },
@@ -29,7 +31,7 @@ fetch('http://localhost:9393/users', {
 
   <form onSubmit={ handleSubmit } className="cmdUser-form">
   
-      <label class='form-label'>Name</label>
+      <label className='form-label'>Name</label>
       <input type="text"
       placeholder='Type Your Name Here'
       required 
@@ -37,7 +39,7 @@ fetch('http://localhost:9393/users', {
       onChange={(e) => setName(e.target.value)} />
     
     
-      <label class="form-label">Gender Identity</label>
+      <label className="form-label">Gender Identity</label>
       <input type="text"
       placeholder='Type Gender Identity Here' 
       value={ gender }
