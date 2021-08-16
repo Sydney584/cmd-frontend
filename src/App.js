@@ -2,7 +2,7 @@
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import UserContainer from './components/UserContainer';
 
 function App() {
@@ -11,13 +11,16 @@ function App() {
     <Router>
     <div className="main">
       <Navbar />
+
      <div className="main-container">
+       <Switch>
      <Route exact path="/">
        <Home />
        </Route>
-       <Route path="/UserContainer"></Route>
+       <Route path="/UserContainer">
        <UserContainer />
-      
+       </Route>
+      </Switch>
      </div>
 
     </div>

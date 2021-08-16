@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Table } from 'semantic-ui-react'
+import { Table, Button, Icon } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 
 export default function UserContainer() {
 
@@ -36,6 +37,28 @@ export default function UserContainer() {
    )})} 
     
     </Table.Body>
+
+    <Table.Footer fullWidth>
+      <Table.Row>
+        <Table.HeaderCell />
+        <Table.HeaderCell colSpan='4'>
+        <Link to='/UpdateUser'>
+          <Button
+            floated='right'
+            icon
+            labelPosition='left'
+            primary
+            size='small'
+          >
+            <Icon name='user' /> Update User info
+          </Button>
+          </Link>
+          
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Footer>
+
+
   </Table>
   </div>
 
