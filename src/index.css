@@ -11,7 +11,7 @@ base styles
 }
 
 
- /* .main{
+  /* .main{
     
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ base styles
     background-color: rgb(233, 227, 240);
     color: rgb(32, 133, 133);
     flex-direction: column;
-  } */
+  }  */
 
 .main-header{
     font-family: 'Acme', sans-serif;

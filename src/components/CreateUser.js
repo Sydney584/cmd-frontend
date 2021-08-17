@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
 
+
 const CreateUser = () => {
   
 const [name, setName] = useState("");
 const [gender, setGender] = useState("")
-const [isLoading, setIsLoading] = useState(false);
+
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -21,7 +22,7 @@ fetch('http://localhost:9393/users', {
             body: JSON.stringify(user)
         }).then(() => {
             console.log('new user posted');
-            setIsLoading(false);
+            
             
            
         })
@@ -46,8 +47,8 @@ fetch('http://localhost:9393/users', {
       onChange={(e) => setGender(e.target.value)} />
   
     
-  { !isLoading && <button>Submit</button>}
-  { isLoading && <button disabled>Creating Account</button>}
+  <button>Submit</button>
+  
   </form>
 );
     }

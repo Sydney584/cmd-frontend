@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import UserContainer from './components/UserContainer';
 
+
 function App() {
   
   return (
@@ -20,6 +21,9 @@ function App() {
        <Route path="/UserContainer">
        <UserContainer />
        </Route>
+       {/* <Route path="/UpdateUser">
+         <UpdateUser />
+       </Route> */}
       </Switch>
      </div>
 
