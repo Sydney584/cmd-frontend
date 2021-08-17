@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -6,10 +6,9 @@ const Navbar = () => {
        <nav className="navbar">
            
            <div className="links">
-               <a href="/">Home</a>
-               <a href="/UserContainer">Active Users Page</a>
-               {/* <a href="/UpdateUser">Correct Your Information</a> */}
-               {/* <a href="/UpdateUser">Correct Your Information</a> */}
+               <Link to="/">Home</Link>
+               <Link to="/UserContainer">Active Users Page</Link>
+               <Link to="/MyNotesContainer">Journal</Link>
                
            </div>
        </nav>

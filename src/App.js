@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import UserContainer from './components/UserContainer';
+import MyNotesContainer from './components/MyNotesContainer';
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
        <Route path="/UserContainer">
        <UserContainer />
        </Route>
-       {/* <Route path="/UpdateUser">
-         <UpdateUser />
-       </Route> */}
+       <Route path="/MyNotesContainer">
+         <MyNotesContainer />
+       </Route>
       </Switch>
      </div>
 
